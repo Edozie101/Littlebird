@@ -1,0 +1,14 @@
+﻿<ion-view class="login_view">
+    <ion-content class="login_content">
+        <div class="list padding login_container">
+            <form name="confirmationForm" ng-submit="varifynumber()">
+                <label class="item item-input item-code">
+                    <input type="number"  ng-model="varifynum.number" required placeholder="Verification code" ng-minlength="5">
+                </label>
+                <button class="button button-block button-outline button-light" type="submit">
+                    VERIFY
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

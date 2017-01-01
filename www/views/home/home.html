@@ -1,0 +1,22 @@
+<ion-view view-title="" class="home_view bg_view">
+    <ion-content class="home_content">
+        <div class="bar item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Search" ng-model="searchText">
+            </label>
+        </div>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getContactList()"></ion-refresher>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in _list | filter:searchText | orderBy:predicate" ng-if="chat.displayName != '' && chat.displayName != null " type="item-text-wrap" >
+             <img ng-src="{{chat.photos[0].value}}">
+            <h2>{{chat.displayName}}</h2>
+                <!--<p ng-if="chat.phoneNumbers[0].value != '' && chat.phoneNumbers[0].value != null  ">{{chat.phoneNumbers}}</p>-->
+            <p>{{chat.phoneNumbers}}</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <a class="icon ion-ios-plus" ng-click="FollowContact(chat.phoneNumbers)"></a>
+        </ion-item>
+        <!--<ion-infinite-scroll ng-if="canWeLoadMoreContent()" on-infinite="populateList()" distance="1%">
+        </ion-infinite-scroll>-->
+    </ion-content>
+    
+</ion-view>

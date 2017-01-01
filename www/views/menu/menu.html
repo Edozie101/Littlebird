@@ -1,0 +1,54 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar-light">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+               
+            </ion-nav-buttons>
+            
+            <ion-nav-buttons side="right">
+                <!--ng-click="changeState('app.search')"--> 
+                <button class="button button-icon button-clear ion-android-more-vertical more_options_btn"
+                        ng-click="openMoreOptionsPopover($event)"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" class="side_menu">
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Menu</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <!--<ion-item class="item item-image " menu-close href="#/app/profile">
+
+                    <img src="img/logo.png" style="width: 48%;">
+                    <h2>Wellcome! {{loginData.username}}</h2>
+                </ion-item>-->
+                <!--<ion-item menu-close href="#/app/map">
+                    <i class="icon ion-ios-home font_20px"></i>&nbsp; Home
+                </ion-item>-->
+                <ion-item menu-close href="#/app/home">
+                    <i class="icon ion-ios-search font_20px"></i>&nbsp; Search 
+                </ion-item>
+                <!--<ion-item menu-close href="#/app/home">
+                    <i class="ion-person-stalker font_20px"></i>&nbsp; Import
+                </ion-item>-->
+                <ion-item menu-close href="#/app/friend">
+                    <i class="ion-ios-chatboxes-outline font_20px"></i>&nbsp; Follow
+                </ion-item>
+                <!--<ion-item menu-close href="#/app/RelationshipChat">
+                    <i class="icon ion-ios-chatboxes font_20px"></i>&nbsp; Relationship
+                </ion-item>-->
+
+                <!--<ion-item menu-close ng-click="logout()">
+                    <i class="icon ion-log-out font_20px"></i>&nbsp; Logout
+                </ion-item>-->
+                
+              
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

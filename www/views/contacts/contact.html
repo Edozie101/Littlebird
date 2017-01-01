@@ -1,0 +1,16 @@
+﻿<ion-view view-title="Home" class="home_view bg_view">
+    <ion-pane ng-controller="contactController">
+        <ion-header-bar class="bar-stable">
+            <button class="button" ng-click="getContactList()">Load</button>
+            <h1 class="title">Contact List</h1>
+            <button class="button" href="#/app/tabs/home">back</button>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item ng-repeat="contact in contacts">
+                    {{contact.displayName}}
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-pane>
+</ion-view>

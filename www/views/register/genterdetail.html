@@ -1,0 +1,70 @@
+﻿<ion-view hide-back-button="true" hide-nav-bar="true">
+    <ion-content class="padding">
+     
+        <form ng-submit="genderdetail()">
+            <div class="list" style="top: calc(50vh - 250px/2);">
+                <div>
+                    <h4 style="text-align: center;">Are you Male or Felmale?</h4>
+                    <div style="text-align: center;">
+                        <select ng-model="genderdetailData.gender">
+                       
+                            <option>Male</option>
+                            <option>Felmale</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="text-align: center;">Are you in a Relationship?</h4>
+                    <div style="text-align: center;">
+                        <select ng-model="genderdetailData.Relation">
+                    
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="button button-block button-positive">
+                    <span class="icon ion-forward"></span>Next
+                </button>
+                <button type="submit" class="button button-clear button-positive">
+                    Skip
+                </button>
+            </div>
+</form>
+    </ion-content>
+</ion-view>
+<!--<ion-view class="login_view">
+    <ion-content class="login_content">
+        <div class="list padding login_container">
+            <form  ng-submit="genderdetail()">
+           
+                <div>
+                    <h4 style="text-align: center;">Are you Male or Felmale?</h4>
+                    <div style="text-align: center;">
+                        <select ng-model="genderdetailData.gender">
+                            <option selected></option>
+                            <option>Male</option>
+                            <option>Felmale</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="text-align: center;">Are you in a Relationship?</h4>
+                    <div style="text-align: center;">
+                        <select  ng-model="genderdetailData.Relation">
+                            <option selected></option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="button button-block button-outline color_ff font_bold login_btn">
+                    <span class="icon ion-log-in"></span>Next
+                </button>
+                <button type="submit" class="button button-clear button-positive">
+                    Skip
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>-->

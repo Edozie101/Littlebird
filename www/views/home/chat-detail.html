@@ -1,0 +1,38 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{contacts.displayName}}">
+  <ion-content class="padding">
+      <form ng-submit="followsdetail()">
+    <div class="row">
+
+        <div class="col" style="align-content:center;">
+            <img ng-src="{{contacts.photos[0].value}}" style="width: 64px; height: 64px">
+        </div>
+        <div class="col" style="align-content:center;">
+            <p>
+                {{contacts.displayName}}
+            </p>
+
+        </div>
+        <div class="col">
+            <p ng-model="follow.phoneNumbers" >
+                {{contacts.phoneNumbers[0].value}}
+            </p>
+        </div>
+        <div class="col">
+            <!--<input type="radio"ng-model="follow.name"  />-->
+            <input class="button button-assertive" ng-model="follow.name"type="submit"  value='Follow' />
+        </div>
+
+
+
+        <br />
+
+    </div>
+</form>
+  </ion-content>
+</ion-view>

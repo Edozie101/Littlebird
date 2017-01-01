@@ -1,0 +1,19 @@
+<ion-view hide-back-button="true" hide-nav-bar="true">
+  <ion-content class="padding">
+    <div class="list text-center padding">
+      <img class="profilePic" src="{{profilePic}}">
+      <h2><span class="bold">Hello!</span> {{displayName}}</h2>
+      <h4 class="line-height-160">Almost done! Just enter your email address and you are good to go!</h4>
+    </div>
+    <form name="completeAccountForm" novalidate ng-submit="completeAccountForm.$valid && completeAccount(user)">
+      <div class="list">
+        <label class="item item-input" style="margin-bottom: 10px;">
+        
+          <input name="email" type="email" ng-model="user.email" placeholder="Email" ng-minlength="5" ng-maxlength="30" required>
+        </label>
+        <input type="submit" class="button button-block button-positive" value="Complete Registration" ng-disabled="completeAccountForm.$invalid">
+      </div>
+    </form>
+    <button onclick="location.href='#/login';" class="button button-assertive button-block button-no-margin-top">Back to Login</button>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+﻿<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Select Country Code</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="vm.search" />
+            </label>
+        </div>
+        <div class="list">
+            <div class="item item-country" collection-repeat="country in countries | filter:{'name': vm.search}" ng-click="vm.updateSelectedCountry(country);modal.hide();">
+                <h2>{{country.name}}</h2>
+                <p>+{{country.intlPrefix}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

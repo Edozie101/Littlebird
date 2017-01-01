@@ -1,0 +1,29 @@
+﻿<ion-view view-title="" class="home_view bg_view">
+
+    <ion-content class="home_content">
+        <div></div>
+     
+            <!--<ion-item ng-hide="Message=='false'" class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/app/RelationshipChat-detail/{{relationshipmobile}}">
+                <img ng-src="img/logo.png" style="width: 48%;">
+                <h2>{{relationshipname}}</h2>
+                <p>{{relationshipmobile}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+                <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    Delete
+                </ion-option-button>
+            </ion-item>-->
+
+        <h2 ng-show="Message.title" style="text-align: center;">you are not following anyone yet</h2>
+
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in followaccount" type="item-text-wrap"href="#/app/chats/{{chat.displayName}}">
+            <img ng-src="img/logo.png" style="width: 48%;">
+            <h2>{{chat.displayName}}</h2>
+            <p>{{chat.mobile}}</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                Delete
+            </ion-option-button>
+        </ion-item>
+        
+    </ion-content>
+</ion-view>

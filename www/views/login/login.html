@@ -1,0 +1,22 @@
+<ion-view hide-back-button="true" hide-nav-bar="true">
+  <ion-content class="padding">
+    <div class="list text-center padding">
+      <img class="logo" src="img/logo.png">
+    </div>
+    <form novalidate name="loginForm" ng-submit="loginForm.$valid && login(user)">
+      <div class="list">
+        <label class="item item-input">
+         <input name="mobile" type="tel" ng-model="user.mobile" placeholder="mobile" ng-minlength="5" ng-maxlength="30" required>
+        </label>
+        <label class="item item-input">
+       <input name="password" type="password" ng-model="user.password" placeholder="Password" ng-minlength="5" ng-maxlength="30" required>
+        </label>
+        <input type="submit" class="button button-block button-positive" value="Login" ng-disabled="loginForm.$invalid">
+          <a href="#/forgotPassword">Forget Password</a>
+        <p class="text-center">
+            <div class="login-disclaimer hide-on-keyboard-open">By clicking "Login" you agree to our <a ui-sref="tos">Terms of Use</a> and <a ui-sref="privacy">Privacy Policy</a>.</div>
+        </p>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

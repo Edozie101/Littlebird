@@ -1,0 +1,31 @@
+<ion-view view-title="Settings" class="settings_view bg_view">
+  <ion-content class="settings_content">
+
+    <div class="list padding margin_zero">
+      <div class="item item-input">
+        <input type="text" placeholder="First Name" ng-model="settings.firstName"/>
+      </div>
+      <div class="item item-input">
+        <input type="text" placeholder="Last Name" ng-model="settings.lastName"/>
+      </div>
+      <div class="item item-input">
+        <input type="email" placeholder="Email" ng-model="settings.email"/>
+      </div>
+      <div class="item item-input">
+        <input type="text" placeholder="Mobile Number" ng-model="settings.mobile"/>
+      </div>
+    </div>
+    <div class="list padding margin_zero">
+      <div class="item item-input">
+        <input type="password" placeholder="Password" ng-model="settings.password"/>
+      </div>
+    </div>
+    <div class="list padding margin_zero">
+      <button class="button button-block button-light margin_zero">Update Profile</button>
+    </div>
+    <div class="list padding margin_zero">
+      <div class="item assertive text-center">Deactivate Account</div>
+    </div>
+
+  </ion-content>
+</ion-view>

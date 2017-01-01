@@ -1,0 +1,34 @@
+﻿<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Edit Profile</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeEdit()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="UpdateProfile()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="user.name" disabled>
+                </label>
+              
+                <label class="item item-input" ng-model="user.relationshipmobile">
+                    <span class="input-label">relationship mobile</span>
+                    <input type="tel" ng-model="user.relationshipmobile">
+                </label>
+                <label class="item item-input" ng-model="user.gender">
+                    <span class="input-label">gender</span>
+                    <input type="text" ng-model="user.gender">
+                </label>
+                <label class="item item-input" ng-model="user.relation">
+                    <span class="input-label">relation</span>
+                    <input type="text" ng-model="user.relation">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Update</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

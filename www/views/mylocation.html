@@ -1,0 +1,14 @@
+<ion-view view-title="Choose a location" hide-back-button="false">
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper marginLeft">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" ng-model="address">
+        </label>
+        <button class="button button-clear" ng-click="mylocation.geocode(address)">
+            Search
+        </button>
+    </div>
+    <ion-content class="has-subheader" scroll="false">
+        <div id="map" data-tap-disabled="true" style="height: 100%"></div>
+    </ion-content>
+</ion-view>
